@@ -1,0 +1,1 @@
+<?php	if(isset($_SERVER['HTTP_CLIENT_IP'])) {		echo $_SERVER['REMOTE_ADDR'];	} else {		if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {			echo $_SERVER['HTTP_X_FORWARDED_FOR'];		} else {			if(isset($_SERVER['REMOTE_ADDR'])) {				echo $_SERVER['REMOTE_ADDR'];			} else {				echo '';			}		}	}?>
